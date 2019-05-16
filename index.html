@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>商城</title>
+<link href="mainLayout.css" rel="stylesheet" type="text/css">
+<link href="slideGoods.css" rel="stylesheet" type="text/css">
+<style></style>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<img src="image/logo.jpg" width="200px" alt="商城">
+			<form action="index.html">
+				<input type="text" placeholder="请输入搜索内容" accesskey="s" autocomplete="on">
+				<input type="submit" value="搜索">
+			</form>
+		</header>
+		<div class="goodsList">
+			<ul>
+				<li><a href="index.html">主页</a></li>
+				<li><a href="index.html">服装</a></li>
+				<li><a href="index.html">电器</a></li>
+				<li><a href="index.html">家具</a></li>
+				<li><a href="index.html">手表</a></li>
+				<li style="float: right; margin-right: 20px"><a href="index.html"><img src="image/shoppingCart.jpg" alt="购物车" width="20px"> 购物车</a></li>
+			</ul>
+		</div>
+		<div class="showGoods">
+			<div class="slideGoods">
+				<ul class="oUl"></ul>
+				<ol>
+					<li class="on">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ol>
+			</div>
+			<div class="showSmallGoods" style="background-image: url('./image/smallGoods1.jpg')">
+				
+			</div>
+			<div class="showSmallGoods" style="background-image: url('./image/smallGoods2.jpg')">
+				
+			</div>
+			<div class="showSmallGoods" style="background-image: url('./image/smallGoods3.jpg')">
+				
+			</div>
+		</div>
+		<div class="login">
+			<img src="image/nohead.jpg" width="100px" height="100px" alt="头像丢失啦">
+			<button style="float: left">登录</button>
+			<button style="float: right">注册</button>
+		</div>
+		<div class="goodsVideo">
+			
+		</div>
+	</div>
+	<script src="js/slideGoods.js"></script>
+</body>
+</html>
