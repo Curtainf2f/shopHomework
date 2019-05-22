@@ -14,24 +14,25 @@ header{
 }
 header img{
 	margin-left: 10px;
+	width: 200px;
 }
 header input:first-of-type{
-	width: 450px;
-	left: 200px;
 	padding-left: 10px;
 	padding-right: 40px;
 	margin-top: 20px;
 	margin-left: 0px;
+	width: 450px;
 	height: 50px;
+	left: 200px;
 	border: 1px solid #CCCCCC;
 	font-size: 18px;
 }
 header input:last-of-type{
+	margin: auto -5px;
 	width: 100px;
 	height: 54px;
 	background-color: darksalmon;
 	border: 1px solid #CCCCCC;
-	margin: auto -5px;
 	color: #FFFFFF;
 	font-size: 18px;
 }
@@ -39,9 +40,9 @@ header input:last-of-type:hover{
 	background-color: salmon;
 }
 header form{
+	margin-right: 100px;
 	width: 600px;
 	height: 50px;
-	margin-right: 100px;
 	float: right;
 }
 .goodsList{
@@ -68,15 +69,15 @@ header form{
 }
 .login{
 	margin-top: 10px;
-	float: left;
 	margin-left: 24px;
 	width: 200px;
 	height: 200px;
+	float: left;
 	background-color: #f0f8ff;
 }
 .login img{
-	border-radius: 100px;
 	margin: 20px 50px 20px 50px;
+	border-radius: 100px;
 	border: 1px solid black;
 }
 .login button{
@@ -90,24 +91,24 @@ header form{
 }
 .showGoods{
 	margin-top: 10px;
-	float: left;
 	width: 800px;
 	height: 440px;
+	float: left;
 }
 .showSmallGoods{
-	background-color: aqua;
-	height: 140px;
 	margin-bottom: 10px;
 	width: 190px;
+	height: 140px;
+	background-color: aqua;
 }
 .showSmallGoods:hover{
 	box-shadow: 0px 0px 10px skyblue;
 }
 .goodsVideo{
-	float: left;
-	background-color: darkred;
-	width: 200px;
-	height: 216px;
 	margin-left: 24px;
 	margin-top: 24px;
+	width: 200px;
+	height: 216px;
+	float: left;
+	background-color: darkred;
 }
