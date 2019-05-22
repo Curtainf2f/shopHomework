@@ -6,7 +6,7 @@ var timer, n = 0;
 
 createDom();
 function createDom() {
-    var num = 100, uHTML = '', pHTML = '', tHTML = '';
+    var num = 59, uHTML = '', pHTML = '', tHTML = '';
     var allWidth = parseInt(getComputedStyle(slideGoods, null).width);
     var width = allWidth / num;
     for (var i = 0; i < num; i++) {

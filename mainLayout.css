@@ -1,93 +1,68 @@
+/* #dd528a */
 * {
 	margin: 0px;
 	padding: 0px;
+	outline: 0px;
 }
 li {
 	list-style: none;
 }
-#container{
-	margin: 20px auto;
+body{
+	min-width: 1024px;
+}
+.container{
 	width: 1024px;
 }
 header{
-	width: 1024px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	background-color: #806bb6;
 }
-header img{
-	margin-left: 10px;
-	width: 200px;
+header p{
+	color: #ffffff;
 }
-header input:first-of-type{
-	padding-left: 10px;
-	padding-right: 40px;
-	margin-top: 20px;
-	margin-left: 0px;
-	width: 450px;
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 50px;
-	left: 200px;
-	border: 1px solid #CCCCCC;
-	font-size: 18px;
-}
-header input:last-of-type{
-	margin: auto -5px;
-	width: 100px;
-	height: 54px;
-	background-color: darksalmon;
-	border: 1px solid #CCCCCC;
-	color: #FFFFFF;
-	font-size: 18px;
-}
-header input:last-of-type:hover{
-	background-color: salmon;
-}
-header form{
-	margin-right: 100px;
-	width: 600px;
-	height: 50px;
-	float: right;
-}
-.goodsList{
-	margin-top: 10px;
 	border: 1px solid #F5F5F5;
 	background-color: #F5F5F5;
 }
-.goodsList ul li {
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#menuBar{
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+#menuBar img{
+	max-width: 100%;
+	max-height: 100%;
+}
+#menuBar ul li {
 	border-radius: 10px;
 	transition: background-color 0.2s linear;
 	display: inline-block;
-	width: 90px;
+	width: 120px;
 	text-align: center;
+	font-size: 22px;
 }
-.goodsList ul li:hover{
+#menuBar ul li:hover{
 	transition: background-color 0.3s ease;
 	background-color: #87CEEB;
 }
-.goodsList ul li a{
+#menuBar ul li a{
 	text-decoration: none;
 	color: black;
 	display: block;
 	line-height: 50px;
-}
-.login{
-	margin-top: 10px;
-	margin-left: 24px;
-	width: 200px;
-	height: 200px;
-	float: left;
-	background-color: #f0f8ff;
-}
-.login img{
-	margin: 20px 50px 20px 50px;
-	border-radius: 100px;
-	border: 1px solid black;
-}
-.login button{
-	margin: auto 10px;
-	width: 70px;
-	height: 30px;
-	background-color: orange;
-	border: 1px solid orange;
-	border-radius: 10px;
-	display: block;
 }
 .showGoods{
 	margin-top: 10px;
@@ -99,16 +74,15 @@ header form{
 	margin-bottom: 10px;
 	width: 190px;
 	height: 140px;
-	background-color: aqua;
+	background-color: #00ffff;
 }
 .showSmallGoods:hover{
-	box-shadow: 0px 0px 10px skyblue;
+	box-shadow: 0px 0px 10px #87ceeb;
 }
-.goodsVideo{
+.goodsInfo{
 	margin-left: 24px;
-	margin-top: 24px;
+	margin-top: 10px;
 	width: 200px;
-	height: 216px;
-	float: left;
-	background-color: darkred;
+	height: 440px;
+	background-color: #8b0000;
 }
