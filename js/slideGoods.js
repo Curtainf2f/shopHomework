@@ -2,6 +2,7 @@ var slideGoods = document.getElementsByClassName('slideGoods')[0];
 var btn = document.querySelectorAll('ol li');
 var oUl = document.getElementsByClassName('oUl')[0];
 var css = document.getElementsByTagName('style')[0];
+var clr;
 var timer, n = 0;
 
 createDom();
@@ -16,6 +17,7 @@ function createDom() {
     }
     oUl.innerHTML = uHTML;
     css.innerHTML += pHTML + tHTML  + '.slideGoods ul li, .slideGoods ul li div{width:' + width + 'px;height:100%}';
+    clr = css.innerHTML;
     bindEvent();
     play();
 }
@@ -49,5 +51,6 @@ function play() {
         }
         btn[n].className = 'on';
         css.innerHTML += '.slideGoods ul li{transform: translateZ(-220px) rotateX(' + (n * 90) + 'deg);}';
+        if(!n) css.innerHTML = clr;
     }, 2000);
 }
