@@ -1,0 +1,19 @@
+#slidingGoods div {
+    text-align: center;
+    width: 200px;
+    height: 250px;
+    float: left;
+    position: relative;
+}
+#slidingGoods div img {
+    border: none;
+}
+#slidingGoods div span {
+    display: none;
+}
+#slidingGoods div:hover span {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    border-radius: 3px;
+}
