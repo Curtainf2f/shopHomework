@@ -5,9 +5,6 @@
     float: left;
     position: relative;
 }
-#slidingGoods div img {
-    border: none;
-}
 #slidingGoods div span {
     display: none;
 }
