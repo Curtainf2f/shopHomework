@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>叮 当 手 表</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            ul {
+                list-style: none;
+            }
+            body {
+                min-width: 1024px;
+            }
+            .container {
+                width: 1024px;
+            }
+            section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                background-color: #806bb6;
+            }
+            header p {
+                color: #ffffff;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                border: 1px solid #f5f5f5;
+                background-color: #f5f5f5;
+            }
+            #menuBar {
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #menuBar img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            #menuBar ul li {
+                border-radius: 10px;
+                transition: background-color 0.2s linear;
+                display: inline-block;
+                width: 120px;
+                text-align: center;
+                font-size: 22px;
+            }
+            #menuBar ul li:hover {
+                transition: background-color 0.3s ease;
+                background-color: #87ceeb;
+            }
+            #menuBar ul li a {
+                text-decoration: none;
+                color: black;
+                display: block;
+                line-height: 50px;
+            }
+            aside {
+                position: fixed;
+                width: 54px;
+                right: 0px;
+                top: 60%;
+                z-index: 100;
+            }
+
+            aside .sidebox {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                white-space: nowrap;
+            }
+
+            aside input:first-of-type {
+                height: 38px;
+                width: 420px;
+                border: 1px solid #cccccc;
+                font-size: 18px;
+            }
+
+            aside input:last-of-type {
+                height: 40px;
+                width: 55px;
+                background-color: #e9967a;
+                border: 1px solid #cccccc;
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+            aside input:last-of-type:hover {
+                background-color: #ffa500;
+            }
+
+            aside ul li img {
+                float: left;
+            }
+
+            aside ul li {
+                width: 54px;
+                height: 54px;
+                float: left;
+                position: relative;
+                border-bottom: 1px solid #444;
+            }
+
+            aside ul li .sidebox {
+                position: absolute;
+                width: 54px;
+                height: 54px;
+                top: 0;
+                right: 0;
+                transition: all 0.3s;
+                background: #000;
+                opacity: 0.8;
+                filter: Alpha(opacity=80);
+                color: #fff;
+                font: 14px/54px "微软雅黑";
+                overflow: hidden;
+            }
+
+            #caidan {
+                width: 1024px;
+                height: 50px;
+                background-color: darksalmon;
+                margin: 2px;
+            }
+            #caidan ul {
+                list-style: none;
+            }
+            #caidan ul li {
+                width: 200px;
+                float: left;
+                position: relative;
+            }
+            #caidan ul li:hover {
+                border-radius: 10px;
+                transition: background-color 0.3s ease;
+                background-color: #87ceeb;
+            }
+            #caidan ul li a {
+                display: block;
+                line-height: 50px;
+                text-decoration: none;
+                text-align: center;
+                font-size: 15px;
+                color: white;
+            }
+            #caidan ul li > ul {
+                display: none;
+            }
+            #caidan ul li:hover > ul {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                border-radius: 10px;
+            }
+            #caidan ul ul {
+                position: relative;
+                top: 100%;
+                background-color: darksalmon;
+            }
+
+            #menu {
+                width: 304px;
+                height: 350px;
+                float: right;
+                overflow: hidden;
+                position: relative;
+            }
+            #menu img {
+                width: 304px;
+                height: 350px;
+                transition: all 0.7s;
+            }
+            #menu img:hover {
+                transform: scale(1.1);
+            }
+            #fangkuai {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: 13px;
+                left: 188px;
+            }
+            .selected {
+                width: 12px;
+                height: 12px;
+                background-color: #ffffff;
+                color: transparent;
+                margin-left: 9px;
+            }
+            .unselected {
+                width: 12px;
+                height: 12px;
+                background-color: #0069ad;
+                color: transparent;
+                margin-left: 9px;
+            }
+
+            #banner {
+                width: 1024px;
+                height: 50px;
+                background-color: gray;
+            }
+            marquee {
+                font-weight: bolder;
+                font-size: 40px;
+                color: white;
+            }
+            #biaoqian {
+                width: 720px;
+                height: 350px;
+                display: flex;
+            }
+            #text {
+                padding: 5px 5px;
+            }
+            #text img {
+                border: none;
+                padding-left: 1px;
+            }
+            #title {
+                width: 1024px;
+                height: 40px;
+                font-size: 20px;
+            }
+            #main {
+                width: 1024px;
+                height: 500px;
+            }
+            #main table {
+                margin: 20px auto;
+            }
+            #main td {
+                width: 100px;
+                text-align: center;
+                border: 1px solid #d7d7d7;
+                padding: 1px;
+            }
+            #main td a {
+                text-decoration: none;
+                color: black;
+            }
+            #main td a:hover {
+                border-bottom: 3px solid red;
+                color: red;
+            }
+            #foot {
+                width: 1024px;
+                height: 50px;
+            }
+            #foot p {
+                text-align: center;
+            }
+            #maodian a {
+                position: fixed;
+                top: 60%;
+                right: 0px;
+            }
+            #dabao {
+                display: flex;
+                width: 1024px;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+
+    <body>
+        <aside>
+            <ul>
+                <li>
+                    <a href="#"
+                        ><div class="sidebox" id="searchBox">
+                            <img src="image/aside_search.png" />
+                            <input
+                                type="text"
+                                class="input"
+                                label="请输入搜索内容"
+                                placeholder="请输入搜索内容"
+                            />
+                            <input type="submit" value="搜索" /></div
+                    ></a>
+                </li>
+                <li>
+                    <a href="javascript:goTop();"
+                        ><div class="sidebox" id="sideNormal">
+                            <img src="image/aside_top.png" />回到顶部
+                        </div></a
+                    >
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <div class="container">
+                <p>欢迎来到小叮当</p>
+            </div>
+        </header>
+        <nav>
+            <div id="menuBar" class="container">
+                <img src="image/logo.jpg" alt="商城" />
+                <ul>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="mao-3.html">服装</a></li>
+                    <li><a href="index.html">电器</a></li>
+                    <li><a href="index.html">家具</a></li>
+                    <li><a href="mao-4.html">手表</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img
+                                src="image/shoppingCart.jpg"
+                                width="20px"
+                            />购物车
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="container">
+                <div id="caidan">
+                    <ul>
+                        <li>
+                            <a href="#">时 装 表</a>
+                            <ul>
+                                <li><a href="#">卡 西 欧</a></li>
+                                <li><a href="#">男 士</a></li>
+                                <li><a href="#">欧 米 茄</a></li>
+                                <li><a href="#">西 铁 城</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">石 英 表</a>
+                            <ul>
+                                <li><a href="#">罗 西 尼</a></li>
+                                <li><a href="#">天 王</a></li>
+                                <li><a href="#">依 波</a></li>
+                                <li><a href="#">情 侣 表</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">机 械 表</a>
+                            <ul>
+                                <li><a href="#">双 显 示</a></li>
+                                <li><a href="#">指 针 式</a></li>
+                                <li><a href="#">宾 格</a></li>
+                                <li><a href="#">飞 亚 达</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">电 子 表</a>
+                            <ul>
+                                <li><a href="#">迪 士 尼</a></li>
+                                <li><a href="#">天 梭</a></li>
+                                <li><a href="#">运 动 表</a></li>
+                                <li><a href="#">防 水</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="dabao">
+                    <div id="biaoqian">
+                        <div id="text">
+                            <a href="#"
+                                ><img
+                                    src="maoimg/T1sTHYFMFXXXcXNlf0-380-480.jpg"
+                                    width="172"
+                                    height="340"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="maoimg/T15L6UFKJbXXcXNlf0-380-480.jpg"
+                                    width="172"
+                                    height="340"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="maoimg/T1cI6ZFP0XXXcXNlf0-380-480.jpg"
+                                    width="172"
+                                    height="340"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="maoimg/T1_cHVFF8bXXcXNlf0-380-480.jpg"
+                                    width="172"
+                                    height="340"
+                            /></a>
+                        </div>
+                    </div>
+                    <div id="menu">
+                        <ul id="tupian">
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="maoimg/O1CN01OXnFyD29tkuvnOAGl_!!324938126.jpg"
+                                        alt=""
+                                        width="304"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="maoimg/O1CN01D9gxpA1S33sDFsdqs_!!20852190.jpg"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="maoimg/TB2al4eh9_I8KJjy0FoXXaFnVXa_!!762753060.jpg"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="maoimg/TB2oeF1XjnyQeBjSspiXXb2QpXa_!!93496083.jpg"
+                                        alt=""
+                                /></a>
+                            </li>
+                        </ul>
+                        <ul id="fangkuai">
+                            <li class="selected">1</li>
+                            <li class="unselected">2</li>
+                            <li class="unselected">3</li>
+                            <li class="unselected">4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="banner">
+                    <marquee behavior="alternate"
+                        >这 里 是 手 表 售 卖 区 ！</marquee
+                    >
+                </div>
+                <div id="title">
+                    <p>
+                        好 货 优 选<span style=" float: right; color: #999"
+                            >《《《《更多选择</span
+                        >
+                    </p>
+                </div>
+                <div id="main">
+                    <table
+                        width="824"
+                        border="0"
+                        cellspacing="0"
+                        cellpadding="0"
+                        height="360"
+                    >
+                        <tr height="160px">
+                            <td>
+                                <img
+                                    src="maoimg/TB2SRTHwhXlpuFjSsphXXbJOXXa_!!93496083.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/O1CN0144xLBT1jYywOKKr0F_!!312654561.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/O1CN01S5Qv9P1S33sFHX09p_!!20852190.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/O1CN011qyMBBpFaZfszqy_!!13155564.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/T21bt3X_pXXXXXXXXX_!!463811634.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                        </tr>
+                        <tr height="20px">
+                            <td>
+                                <a href="#">聚利时julius时装潮流韩版</a
+                                ><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥94</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">白色韩版潮流手表</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥128元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">Swatch斯沃琪手表女</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥440元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">依波表正品防水男表</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥480元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">手动上链镂空机械表</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥48元</span
+                                >
+                            </td>
+                        </tr>
+                        <tr height="160px">
+                            <td>
+                                <img
+                                    src="maoimg/TB22gRghZnI8KJjSspeXXcwIpXa_!!762753060.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/O1CN01LpHiRv1xPjaGkXofd_!!49306436.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/O1CN01YKrYhv1xPjag4eqYP_!!49306436.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/O1CN011xPjX95bBjj7I2S_!!49306436.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                            <td>
+                                <img
+                                    src="maoimg/TB1rh4GjkKWBuNjy1zjXXcOypXa_!!0-item_pic.jpg"
+                                    width="200"
+                                    height="200"
+                                />
+                            </td>
+                        </tr>
+                        <tr height="20px">
+                            <td>
+                                <a href="#">全自动机械表特种兵正品</a
+                                ><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥1680元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">卡西欧手表男g-shock限量</a
+                                ><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥615元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">卡西欧35周年限量款</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥3730元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">卡西欧男表PROTREK</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥5680元</span
+                                >
+                            </td>
+                            <td>
+                                <a href="#">男士手表防水时尚款</a><br /><span
+                                    style=" color: red; font-size:15px;"
+                                    >促销价 ￥79.9元</span
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="foot">
+                    <br />
+                    <br />
+                    <p>本网页为学生作业，不可转载或用于商业</p>
+                </div>
+            </div>
+        </section>
+        <script src="js/jquery.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("aside ul li #searchBox").hover(
+                    function() {
+                        $(this)
+                            .animate({ width: "555px" }, 100)
+                            .css({
+                                opacity: "1",
+                                filter: "Alpha(opacity=100)",
+                                background: "#ae1c1c"
+                            });
+                    },
+                    function() {
+                        $(this)
+                            .animate({ width: "54px" }, 100)
+                            .css({
+                                opacity: "0.8",
+                                filter: "Alpha(opacity=80)",
+                                background: "#000"
+                            });
+                    }
+                );
+                $("aside ul li #sideNormal").hover(
+                    function() {
+                        $(this)
+                            .animate({ width: "124px" }, 200)
+                            .css({
+                                opacity: "1",
+                                filter: "Alpha(opacity=100)",
+                                background: "#ae1c1c"
+                            });
+                    },
+                    function() {
+                        $(this)
+                            .animate({ width: "54px" }, 200)
+                            .css({
+                                opacity: "0.8",
+                                filter: "Alpha(opacity=80)",
+                                background: "#000"
+                            });
+                    }
+                );
+            });
+
+            function goTop() {
+                $("html,body").animate({ scrollTop: 0 }, 600);
+            }
+        </script>
+        <script>
+            var menu = document.getElementById("menu");
+            var tupian = document
+                .getElementById("tupian")
+                .getElementsByTagName("li");
+            var fangkuai = document
+                .getElementById("fangkuai")
+                .getElementsByTagName("li");
+            var index = 0;
+            var timer = null;
+            /*定义图片切换函数*/
+            function changePic(curIndex) {
+                for (var i = 0; i < tupian.length; ++i) {
+                    tupian[i].style.display = "none";
+                    fangkuai[i].className = "unselected";
+                }
+                tupian[curIndex].style.display = "block";
+                fangkuai[curIndex].className = "selected";
+            }
+            /*index超出图片总量时归零*/
+            function autoPlay() {
+                if (+index >= tupian.length) {
+                    index = 0;
+                }
+                changePic(index);
+                index++;
+            }
+            /*定义并调用自动播放函数*/
+            timer = setInterval(autoPlay, 1500);
+            /*鼠标划过整个容器时停止自动播放*/
+            menu.onmouseover = function() {
+                clearInterval(timer);
+            };
+            /*鼠标离开整个容器时继续播放下一张*/
+            menu.onmouseout = function() {
+                timer = setInterval(autoPlay, 1500);
+            };
+            /*遍历所有数字导航实现划过切换至对应的图片*/
+            for (var i = 0; i < fangkuai.length; i++) {
+                fangkuai[i].onmouseover = function() {
+                    clearInterval(timer);
+                    index = this.innerText - 1;
+                    changePic(index);
+                };
+            }
+        </script>
+    </body>
+</html>
