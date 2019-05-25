@@ -10,6 +10,7 @@ aside .sidebox{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    white-space: nowrap;
 }
 
 aside input:first-of-type{
