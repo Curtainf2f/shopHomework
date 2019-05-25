@@ -6,6 +6,32 @@ aside{
 	z-index: 100;
 }
 
+aside .sidebox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+aside input:first-of-type{
+    height: 38px;
+    width: 420px;
+    border: 1px solid #CCCCCC;
+	font-size: 18px;
+}
+
+aside input:last-of-type{
+    height: 40px;
+    width: 55px;
+    background-color: #e9967a;
+	border: 1px solid #CCCCCC;
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+aside input:last-of-type:hover{
+    background-color: #ffa500;
+}
+
 aside ul li img {
     float: left;
 }
