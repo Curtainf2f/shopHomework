@@ -17,10 +17,10 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 20px;
 }
 .haveColor{
 	background-color: rgba(128, 107, 182, 0.4);
-	margin-top: 20px;
 }
 header{
 	display: flex;
@@ -82,4 +82,19 @@ nav{
 }
 .showSmallGoods:hover{
 	box-shadow: 0px 0px 10px #87ceeb;
+}
+.typeShowBox{
+	width: 1024px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.typeShow{
+	border: 1px solid red;
+	background-color: darkblue;
+	width: 500px;
+	height: 400px;
+}
+#goodsNews{
+	height: 100px;
 }
