@@ -1,0 +1,835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>无标题文档</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                min-width: 1024px;
+            }
+            .container {
+                width: 1024px;
+            }
+            #container {
+                margin: 0 auto;
+                width: 1024px;
+                height: 1050px;
+                background-color: #fff;
+                display: flex;
+                flex-flow: row wrap;
+            }
+            section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                background-color: #806bb6;
+            }
+            header p {
+                color: #ffffff;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                border: 1px solid #f5f5f5;
+                background-color: #f5f5f5;
+            }
+            #menuBar {
+                display: flex;
+                height: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #menuBar img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            #menuBar ul li {
+                border-radius: 10px;
+                transition: background-color 0.2s linear;
+                display: inline-block;
+                width: 120px;
+                text-align: center;
+                font-size: 22px;
+            }
+            #menuBar ul li:hover {
+                transition: background-color 0.3s ease;
+                background-color: #87ceeb;
+            }
+            #menuBar ul li a {
+                text-decoration: none;
+                color: black;
+                display: block;
+                line-height: 50px;
+            }
+            aside {
+                position: fixed;
+                width: 54px;
+                right: 0px;
+                top: 60%;
+                z-index: 100;
+            }
+
+            aside .sidebox {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                white-space: nowrap;
+            }
+
+            aside input:first-of-type {
+                height: 38px;
+                width: 420px;
+                border: 1px solid #cccccc;
+                font-size: 18px;
+            }
+
+            aside input:last-of-type {
+                height: 40px;
+                width: 55px;
+                background-color: #e9967a;
+                border: 1px solid #cccccc;
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+            aside input:last-of-type:hover {
+                background-color: #ffa500;
+            }
+
+            aside ul li img {
+                float: left;
+            }
+
+            aside ul li {
+                width: 54px;
+                height: 54px;
+                float: left;
+                position: relative;
+                border-bottom: 1px solid #444;
+            }
+
+            aside ul li .sidebox {
+                position: absolute;
+                width: 54px;
+                height: 54px;
+                top: 0;
+                right: 0;
+                transition: all 0.3s;
+                background: #000;
+                opacity: 0.8;
+                filter: Alpha(opacity=80);
+                color: #fff;
+                font: 14px/54px "微软雅黑";
+                overflow: hidden;
+            }
+
+            #menu {
+                width: 1024px;
+                height: 40px;
+                background-color: #fff;
+                background-color: red;
+                margin: 0px;
+            }
+            #menu ul {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            #menu ul li {
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                font-size: 20px;
+                float: left;
+            }
+
+            #menu ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            #main1 {
+                width: 400px;
+                height: 600px;
+                position: relative;
+            }
+            #lunbo_img img:hover {
+                transform: scale(1.07);
+            }
+            #lunbo_img li img {
+                width: 400px;
+                height: 400px;
+                transition: all 0.6s;
+            }
+            #lunbo_img {
+                width: 400px;
+                height: 400px;
+                position: relative;
+                left: 0px;
+                top: 0px;
+                overflow: hidden;
+            }
+
+            #imgyuan li {
+                width: 50px;
+                height: 50px;
+                float: left;
+                list-style-type: none;
+                color: #fff;
+                margin-left: 20px;
+            }
+            #imgyuan img {
+                width: 48px;
+                height: 48px;
+            }
+
+            #main2 {
+                width: 624px;
+                height: 700px;
+                background-color: #fff;
+            }
+            #main2 .Aprice,
+            .price,
+            .youhui {
+                background-color: #9cf;
+                font-size: 20px;
+            }
+            #main2 .Aprice samp {
+                text-decoration: line-through;
+            }
+            #main2 .price samp {
+                color: #f00;
+                font-size: 30px;
+            }
+            #main2 .youhui samp {
+                color: #f99;
+            }
+            #banben li {
+                font-size: 14px;
+                line-height: 40px;
+                padding-right: 20px;
+                color: #848484;
+                padding-top: 25px;
+                float: left;
+            }
+            #yanse li {
+                font-size: 14px;
+                line-height: 40px;
+                padding-right: 20px;
+                color: #848484;
+                padding-top: 25px;
+                float: left;
+            }
+            #neicun li {
+                font-size: 14px;
+                line-height: 40px;
+                padding-right: 20px;
+                color: #848484;
+                padding-top: 25px;
+                float: left;
+            }
+            #main2 .one {
+                margin-right: 10px;
+                font-size: 16px;
+                padding: 0px 50px;
+                border-radius: 4px;
+                line-height: 50px;
+                color: #fff;
+                background-color: #fd532d;
+            }
+            #main2 .two {
+                margin-right: 10px;
+                font-size: 16px;
+                padding: 0px 50px;
+                border-radius: 4px;
+                line-height: 50px;
+                color: #fff;
+                background-color: #e60013;
+            }
+
+            #main2 li {
+                padding-right: 10px;
+                list-style-type: none;
+            }
+            #main2 ul li a {
+                color: #333;
+                font-size: 20px;
+                border: #e3e3e3 solid 1px;
+                display: block;
+                text-decoration: none;
+                float: left;
+            }
+            #main2 .good p {
+                float: left;
+                font-size: 14px;
+                line-height: 80px;
+                padding-right: 20px;
+                color: #848484;
+            }
+            #main2 .good1 p {
+                float: left;
+                font-size: 14px;
+                line-height: 80px;
+                padding-right: 20px;
+                color: #848484;
+            }
+            #main2 .good1 {
+                clear: left;
+            }
+            #main2 .good2 p {
+                float: left;
+                font-size: 14px;
+                line-height: 80px;
+                padding-right: 20px;
+                color: #848484;
+            }
+            #main2 .good2 {
+                clear: left;
+            }
+            #main2 ul li a:hover {
+                text-decoration: none;
+                border: #f00 solid 1px;
+            }
+            .shuliang {
+                width: 554px;
+                height: 100px;
+                overflow: hidden;
+            }
+            .shuliang1 {
+                font-family: "微软雅黑";
+                font-size: 14px;
+                color: #605f5f;
+                line-height: 100px;
+                margin-left: 16px;
+                float: left;
+            }
+            #shuliang2 {
+                float: left;
+                margin-top: 34px;
+                margin-left: 30px;
+            }
+            #ss {
+                height: 30px;
+                width: 60px;
+                margin-top: 34px;
+                border: 1px solid #dddddd;
+                line-height: 30px;
+                text-align: center;
+                float: left;
+            }
+            #shuliang3 > img {
+                float: left;
+                margin-top: 34px;
+            }
+            .fuwu {
+                padding-top: 30px;
+            }
+            .pay {
+                padding-top: 30px;
+                float: left;
+            }
+            .payimg ul li {
+                float: left;
+            }
+            .payimg img {
+                width: 20px;
+                height: 20px;
+                float: left;
+                padding-top: 30px;
+            }
+            #main3 {
+                width: 200px;
+                height: 1000px;
+                background-color: #fff;
+                overflow: hidden;
+            }
+            .dianming {
+                background-color: #ececec;
+                font-size: 15px;
+                height: 40px;
+                text-align: center;
+                padding-top: 15px;
+            }
+            .p1 {
+                text-align: center;
+                padding-top: 20px;
+                color: #cdcdcd;
+            }
+            .p2 {
+                padding-top: 20px;
+            }
+            .p3 {
+                color: #f00;
+                padding-top: 5px;
+            }
+            #main3 button {
+                margin: 5px;
+            }
+            .oneone {
+                background-color: #000;
+                color: #fff;
+            }
+            .duokan {
+                text-align: center;
+            }
+            .duokan span {
+                text-align: center;
+                color: #f00;
+            }
+            #main4 {
+                width: 824px;
+                height: 2500px;
+                background-color: #fff;
+            }
+            #main5 {
+                width: 1024px;
+                height: 200px;
+            }
+            .menutwo {
+                border: 1px solid #f5f5f5;
+                background-color: white;
+            }
+            .menutwo ul li {
+                border-radius: 10px;
+                transition: background-color 0.2s linear;
+                display: inline-block;
+                width: 90px;
+                text-align: center;
+            }
+            .menutwo ul li:hover {
+                transition: background-color 0.3s ease;
+                background-color: #87ceeb;
+            }
+            .menutwo ul li a {
+                text-decoration: none;
+                color: black;
+                display: block;
+                line-height: 50px;
+            }
+            .selected {
+                background-color: #f00;
+            }
+            .unselected {
+                background-color: #fff;
+            }
+            #main4 p {
+                padding-left: 30px;
+                padding-top: 30px;
+            }
+            .xianshi {
+                display: block;
+            }
+            .zhegai {
+                display: none;
+            }
+            #main4 ul li {
+                list-style-type: none;
+            }
+            #main {
+                width: 1024px;
+                height: 120px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <aside>
+            <ul>
+                <li>
+                    <a href="#"
+                        ><div class="sidebox" id="searchBox">
+                            <img src="image/aside_search.png" />
+                            <input
+                                type="text"
+                                class="input"
+                                label="请输入搜索内容"
+                                placeholder="请输入搜索内容"
+                            />
+                            <input type="submit" value="搜索" /></div
+                    ></a>
+                </li>
+                <li>
+                    <a href="javascript:goTop();"
+                        ><div class="sidebox" id="sideNormal">
+                            <img src="image/aside_top.png" />回到顶部
+                        </div></a
+                    >
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <div class="container">
+                <p>欢迎来到小叮当</p>
+            </div>
+        </header>
+        <nav>
+            <div id="menuBar" class="container">
+                <img src="image/logo.jpg" alt="商城" />
+                <ul>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="mao-3.html">服装</a></li>
+                    <li><a href="rong1.html">电器</a></li>
+                    <li><a href="rong2.html">家具</a></li>
+                    <li><a href="mao-4.html">手表</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img
+                                src="image/shoppingCart.jpg"
+                                width="20px"
+                            />购物车
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div id="container">
+                <div id="main">
+                    <a href="#"
+                        ><img src="yuan1/FZKEV[YIY5ALGS5BHMKBA[F.png"
+                    /></a>
+                </div>
+                <div id="main1">
+                    <div id="small">
+                        <ul id="lunbo_img">
+                            <li>
+                                <img src="yuan1/M]B_GTGC(FPKK@``2{7Z4VB.png" />
+                            </li>
+                            <li>
+                                <img src="yuan1/NN)NSLA$(IZUMYBC(KE[BOQ.png" />
+                            </li>
+                            <li>
+                                <img src="yuan1/V7WLM~1O1RIW[PKNA[BQ$20.png" />
+                            </li>
+                            <li>
+                                <img src="yuan1/ZQ7J3YEW9_RD%(3QI4W2`PD.png" />
+                            </li>
+                        </ul>
+                    </div>
+                    <ul id="imgyuan">
+                        <li class="selected">
+                            <img
+                                src="yuan1/M]B_GTGC(FPKK@``2{7Z4VB.png"
+                                style="margin:1px;"
+                            />1
+                        </li>
+                        <li class="unselected">
+                            <img
+                                src="yuan1/NN)NSLA$(IZUMYBC(KE[BOQ.png"
+                                style="margin:1px;"
+                            />2
+                        </li>
+                        <li class="unselected">
+                            <img
+                                src="yuan1/V7WLM~1O1RIW[PKNA[BQ$20.png"
+                                style="margin:1px;"
+                            />3
+                        </li>
+                        <li class="unselected">
+                            <img
+                                src="yuan1/ZQ7J3YEW9_RD%(3QI4W2`PD.png"
+                                style="margin:1px;"
+                            />4
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="main2">
+                    <p class="imgname" style="font-size:23px">
+                        木也北欧床意式极简实木布艺轻奢表情现代简约小户型ins风格家具
+                    </p>
+                    <p class="Aprice">价格：<samp>￥89.00</samp></p>
+                    <p class="price">促销价：<samp>￥88888.00</samp></p>
+                    <p class="youhui">
+                        店铺优惠：<samp>购物满两件打八折</samp>
+                    </p>
+
+                    <div class="good">
+                        <p class="banben1">尺寸</p>
+                        <ul id="banben">
+                            <li><a href="#">1500*2000</a></li>
+                            <li><a href="#">1800*2000</a></li>
+                            <li><a href="#">2000*2000</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="good1">
+                        <p class="yanse1">颜色</p>
+                        <ul id="yanse">
+                            <li><a href="#">红色</a></li>
+                            <li><a href="#">黄色</a></li>
+                            <li><a href="#">黑色</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="good2">
+                        <p class="neicun1">结构</p>
+                        <ul id="neicun">
+                            <li><a href="#">床+1柜子</a></li>
+                            <li><a href="#">床+2柜子</a></li>
+                            <li><a href="#">床+3柜子</a></li>
+                        </ul>
+                    </div>
+                    <div class="shuliang">
+                        <p class="shuliang1">数量</p>
+                        <div id="shuliang2">
+                            <img
+                                src="yuan1/4cb9aeb33fb02b2ca24ab597a8e50db0_X15.png"
+                            />
+                        </div>
+                        <form><input id="ss" value="1" /></form>
+                        <div id="shuliang3">
+                            <img
+                                src="yuan1/b05cce755e6153fc117d77f8283b850e_16.png"
+                            />
+                        </div>
+                    </div>
+                    <div class="anniu">
+                        <button class="one">
+                            <img
+                                src="yuan1/DAHCTTQKS{]WN3FE$4SDXP0.png"
+                                width="20"
+                                height="25"
+                            />加购物车
+                        </button>
+                        <button class="two">
+                            <img
+                                src="yuan1/~(Q)LZKA}(4VRETRUJCN8$P.png"
+                                width="25"
+                                height="25"
+                            />立即购买
+                        </button>
+                    </div>
+                    <p class="fuwu">
+                        服务承诺：正品保证 极速退款 七天无理由退还
+                    </p>
+                    <div class="payimg">
+                        <p class="pay">支付方式：</p>
+                        <ul>
+                            <li></li>
+                            <li>
+                                <img src="yuan1/LR26HXYD5142HAF}KE6$H~R.png" />
+                            </li>
+                            <li>
+                                <img src="yuan1/`JVFI7212@R9}KFLO0Z]P[D.png" />
+                            </li>
+                            <li>
+                                <img src="yuan1/5U3C$~RZ5Z~I$FROFY@WYCX.png" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="main3">
+                    <div id="dianpu">
+                        <p class="dianming">苏宁易购官方旗舰店</p>
+                        <p class="p1">天猫4年店</p>
+                        <p class="p2">
+                            &nbsp&nbsp描述&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp服务&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp物流
+                        </p>
+                        <p class="p3">
+                            &nbsp&nbsp4.8↑&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4.8↑&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4.8↑
+                        </p>
+                        <button class="oneone" style="width:80px;height:30px;">
+                            进店逛逛
+                        </button>
+                        <button class="twotwo" style="width:80px;height:30px;">
+                            收藏店铺
+                        </button>
+                    </div>
+
+                    <div class="duokan">
+                        <h4>看了还看</h4>
+                        <a href="#"
+                            ><img src="yuan1/`Q}_N~`(LA`B2Q7ZQHJBNNB.png"
+                        /></a>
+                        <p>简易布衣布艺衣柜</p>
+                        <span>￥199.00</span>
+                        <a href="#"
+                            ><img src="yuan1/[[PSYC18(Q_ICG5VUCFH)N4.png"
+                        /></a>
+                        <p>餐桌实木家用餐具</p>
+                        <span>￥96.00</span>
+                        <a href="#"
+                            ><img src="yuan1/9KE6JAE815VX068ZN[6~@1E.png"
+                        /></a>
+                        <p>立体实用书柜学生</p>
+                        <span>￥27.00</span>
+                    </div>
+                </div>
+                <div id="main4">
+                    <div class="menutwo">
+                        <ul>
+                            <li><a>规格参数</a></li>
+                            <li><a>专享服务</a></li>
+                            <li><a>商品评价</a></li>
+                            <li style="float: right; margin-right: 20px">
+                                <a href="index.html"
+                                    ><img
+                                        src="yuan1/shoppingCart.jpg"
+                                        alt="购物车"
+                                        width="20px"
+                                    />
+                                    购物车</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sumdiv">
+                        <div class="xianshi">
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/LA~TN$_}JL]ZO}1(GWA`CTS.png"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/%PT5L}OZF1`N$9Z{$VVT$MS.png"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/C0L${A0)CSORY9NCXW$0BSP.png"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/FH0H~UFUM$_%}`~$DUBCD5V.png"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/N__7{NNYR{34TJPIHPO14QL.png"
+                                    /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zhegai">
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/Q_D{0(TWEPWJ723%}HNQOD2.png"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/OL`MJO~2@1Q[5ZH7VR{W%JY.png"
+                                    /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zhegai">
+                            <ul>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/B~ULI}}}K3V49OLC5)APGT7.png"
+                                    /></a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        ><img
+                                            src="yuan1/NS{XF)~UGSE[WTS5ZAN`F`Q.png"
+                                    /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="main5">
+                    <ul>
+                        <li><img src="yuan1/(XSZ8UKW1LQG)%B{O0ECTTK.png" /></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <script src="js/jquery.js"></script>
+        <script>
+            var k1 = document.getElementById("small").children;
+            var k2 = document
+                .getElementById("lunbo_img")
+                .getElementsByTagName("li");
+            var k3 = document.getElementById("imgyuan").children;
+            var abutton = $(".menutwo ul li");
+            var dd = $(".sumdiv div");
+            var index = 0;
+            for (var x = 0; x < dd.length; x++) {
+                abutton[x].index = x;
+                abutton[x].onclick = function() {
+                    for (var j = 0; j < dd.length; j++) {
+                        dd[j].className = "zhegai";
+                    }
+
+                    dd[this.index].className = "xianshi";
+                };
+            }
+            /*定义图片切换函数*/
+            function changePic(curIndex) {
+                for (var i = 0; i < k2.length; ++i) {
+                    k2[i].style.display = "none";
+                    k3[i].className = "unselected";
+                }
+                k2[curIndex].style.display = "block";
+                k3[curIndex].className = "selected";
+            }
+            /*index超出图片总量时归零*/
+            function autoPlay() {
+                if (+index >= k2.length) {
+                    index = 0;
+                }
+                changePic(index);
+                index++;
+            }
+            /*定义并调用自动播放函数*/
+            timer = setInterval(autoPlay, 1500);
+            /*鼠标划过整个容器时停止自动播放*/
+            /*鼠标离开整个容器时继续播放下一张*/
+            k2.onmouseout = function() {
+                timer = setInterval(autoPlay, 1500);
+            };
+            /*遍历所有数字导航实现划过切换至对应的图片*/
+            for (var i = 0; i < k3.length; i++) {
+                k3[i].onmouseover = function() {
+                    clearInterval(timer);
+                    index = this.innerText - 1;
+                    changePic(index);
+                };
+            }
+
+            document.getElementById("shuliang2").onclick = function() {
+                var num = parseInt(document.getElementById("ss").value);
+                if (num > 1) {
+                    num -= 1;
+                    document.getElementById("ss").value = num;
+                }
+            };
+            document.getElementById("shuliang3").onclick = function() {
+                var num = parseInt(document.getElementById("ss").value);
+                num += 1;
+                document.getElementById("ss").value = num;
+            };
+        </script>
+        <script src="js/aside.js"></script>
+    </body>
+</html>

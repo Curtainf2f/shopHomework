@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link href="gouwu.css" rel="stylesheet" type="text/css" />
+        <title>小叮当家具</title>
+        <script src="js/jquery.js"></script>
+    </head>
+
+    <body>
+        <aside>
+            <ul>
+                <li>
+                    <a href="#"
+                        ><div class="sidebox" id="searchBox">
+                            <img src="image/aside_search.png" />
+                            <input
+                                type="text"
+                                class="input"
+                                label="请输入搜索内容"
+                                placeholder="请输入搜索内容"
+                            />
+                            <input type="submit" value="搜索" /></div
+                    ></a>
+                </li>
+                <li>
+                    <a href="javascript:goTop();"
+                        ><div class="sidebox" id="sideNormal">
+                            <img src="image/aside_top.png" />回到顶部
+                        </div></a
+                    >
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <div class="container">
+                <p>欢迎来到小叮当</p>
+            </div>
+        </header>
+        <nav>
+            <div id="menuBar" class="container">
+                <img src="image/logo.jpg" alt="商城" />
+                <ul>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="mao-3.html">服装</a></li>
+                    <li><a href="rong1.html">电器</a></li>
+                    <li><a href="rong2.html">家具</a></li>
+                    <li><a href="mao-4.html">手表</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img
+                                src="image/shoppingCart.jpg"
+                                width="20px"
+                            />购物车
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div id="container">
+                <div id="menu">
+                    <table
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                    >
+                        <tr class="a">
+                            <td class="one"><span>所有商品</span></td>
+                            <td class="two">
+                                <span><a href="#">首页</a></span>
+                            </td>
+                            <td class="three">
+                                <span
+                                    ><img
+                                        src="rongimg/shoppingCart.jpg"
+                                        width="20px"
+                                    /><a href="#"> 购物车</a></span
+                                >
+                            </td>
+                            <td class="four"><span>每日精选</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="mainContent">
+                    <div id="sidebar" class="caidan">
+                        <ul id="ul_list">
+                            <li>
+                                <a href="#">全屋定制</a>
+                                <div class="list">
+                                    <a href="#">定制柜</a>
+                                    <hr />
+                                    <span><a href="#">橱柜</a></span
+                                    ><span><a href="#">走入式衣柜</a></span
+                                    ><span><a href="#">书柜书台</a></span
+                                    ><span><a href="#">酒柜</a></span
+                                    ><span><a href="#">鞋柜</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">门</a>
+                                    <hr />
+                                    <span><a href="#"></a></span
+                                    ><span><a href="#">室内门</a></span
+                                    ><span><a href="#">移门</a></span
+                                    ><span><a href="#">庭院门</a></span
+                                    ><span><a href="#">防火门</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">家装建材</a>
+                                <div class="list">
+                                    <a href="#">灯具灯饰</a>
+                                    <hr />
+                                    <span><a href="#">CPU</a></span
+                                    ><span><a href="#">射灯</a></span
+                                    ><span><a href="#">台灯</a></span
+                                    ><span><a href="#">落地灯</a></span
+                                    ><span><a href="#">吊灯</a></span
+                                    ><span><a href="#">户外灯</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">卫浴用品</a>
+                                    <hr />
+                                    <span><a href="#">浴霸</a></span
+                                    ><span><a href="#">花洒</a></span
+                                    ><span><a href="#">智能马桶</a></span
+                                    ><span><a href="#">卫浴龙头</a></span
+                                    ><span><a href="#">地漏角阀</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">住宅家具</a>
+                                <div class="list">
+                                    <a href="#">卧房家具</a>
+                                    <hr />
+                                    <span><a href="#">CPU</a></span
+                                    ><span><a href="#">实木床</a></span
+                                    ><span><a href="#">布艺床</a></span
+                                    ><span><a href="#">床垫</a></span
+                                    ><span><a href="#">床头柜</a></span
+                                    ><span><a href="#">儿童床</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">餐厅家具</a>
+                                    <hr />
+                                    <span><a href="#">ipad</a></span
+                                    ><span><a href="#">欧式餐桌</a></span
+                                    ><span><a href="#">实木餐桌</a></span
+                                    ><span><a href="#">餐椅</a></span
+                                    ><span><a href="#">餐边柜</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">家纺家饰</a>
+                                <div class="list">
+                                    <a href="#">布艺</a>
+                                    <hr />
+                                    <span><a href="#">CPU</a></span
+                                    ><span><a href="#">定制窗帘</a></span
+                                    ><span><a href="#">成品窗帘</a></span
+                                    ><span><a href="#">卷帘百叶</a></span
+                                    ><span><a href="#">地毯</a></span
+                                    ><span><a href="#">桌布</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">摆件</a>
+                                    <hr />
+                                    <span><a href="#">花瓶</a></span
+                                    ><span><a href="#">仿真花</a></span
+                                    ><span><a href="#">木雕</a></span
+                                    ><span><a href="#">储物罐</a></span
+                                    ><span><a href="#">香薰炉</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">生活百货</a>
+                                <div class="list">
+                                    <a href="#">日用</a>
+                                    <hr />
+                                    <span><a href="#">遮阳伞</a></span
+                                    ><span><a href="#">拖鞋</a></span
+                                    ><span><a href="#">迷你风扇</a></span
+                                    ><span><a href="#">相册</a></span
+                                    ><span><a href="#">毛巾</a></span
+                                    ><span><a href="#">眼罩</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">清洁</a>
+                                    <hr />
+                                    <span><a href="#">剃须刮毛刀</a></span
+                                    ><span><a href="#">沐浴球</a></span
+                                    ><span><a href="#">拖把</a></span
+                                    ><span><a href="#">垃圾桶</a></span
+                                    ><span><a href="#">围裙</a></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sidebar2">
+                        <ul id="picUl">
+                            <li>
+                                <a href="#"
+                                    ><img src="rongimg/11.jpg" alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img src="rongimg/22.jpg" alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img src="rongimg/33.jpg" alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img src="rongimg/44.jpg" alt=""
+                                /></a>
+                            </li>
+                        </ul>
+                        <ul id="dotUl">
+                            <li class="selected">1</li>
+                            <li class="unselected">2</li>
+                            <li class="unselected">3</li>
+                            <li class="unselected">4</li>
+                        </ul>
+                        <div id="titleDiv">
+                            <span class="show"><a href="#">1</a></span>
+                            <span class="hide"><a href="#">2</a></span>
+                            <span class="hide"><a href="#">3</a></span>
+                            <span class="hide"><a href="#">4</a></span>
+                        </div>
+                    </div>
+                    <div id="content"><img src="rongimg/年中大促销.jpg" /></div>
+                </div>
+                <div id="footer">
+                    <hr
+                        style="border:1 dashed #987cb9"
+                        width="80%"
+                        color="#987cb9"
+                        size="1"
+                    />
+                    <a>区域零售</a>
+                    <hr
+                        style="border:1 dashed #987cb9"
+                        width="80%"
+                        color="#987cb9"
+                        size="1"
+                    />
+                </div>
+                <div id="footer2">
+                    <ul class="nav">
+                        <li class="selected">上海</li>
+                        <li>深圳</li>
+                        <li>杭州</li>
+                        <li>南京</li>
+                        <li>大连</li>
+                        <li>哈尔滨</li>
+                        <li>成都</li>
+                        <li>重庆</li>
+                    </ul>
+                </div>
+                <div class="footer3">
+                    <div class="list1 ">
+                        <img src="rongimg/上海.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/深圳.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/杭州.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/南京.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/大连.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/哈尔滨.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/成都.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/重庆.jpg" />
+                    </div>
+                </div>
+                <div class="footer4">
+                    <ul>
+                        <li><a>1F 住宅家具</a></li>
+                    </ul>
+                </div>
+                <div class="footer5">
+                    <table height="500" width="1024">
+                        <tr>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/111.jpg"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/123.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">小半家具北欧樱桃木床</a
+                                ><a href="#"> ￥ 3680</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/现代简约小户型ins风格家.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >现代简约小户型ins风格家具 ￥ 3550</a
+                                >
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/代简约小户型ins风格.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">代简约小户型ins风格家具 ￥ 4200</a>
+                            </td>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/1234.jpg"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/现代防水免洗布沙发.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">现代防水免洗布沙发 ￥ 2080 </a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/新古典烤漆茶几电视柜.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">新古典烤漆茶几电视柜 ￥ 1370</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/开门衣柜全屋定制家具.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">开门衣柜全屋定制家具 ￥ 858</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer4">
+                    <ul>
+                        <li><a>2F 床品</a></li>
+                    </ul>
+                </div>
+                <div class="footer5">
+                    <table height="500" width="1024">
+                        <tr>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/12345.jpg"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/单人记忆棉枕头枕芯.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">单人记忆棉枕头枕芯</a
+                                ><a href="#"> ￥ 129</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/双人枕头.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">双人枕头 ￥ 150</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/U型护颈枕头U形颈椎.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">U型护颈枕头U形颈椎 ￥ 100</a>
+                            </td>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/1234567.jpg"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/子颈椎枕u形枕.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">子颈椎枕u形枕 ￥ 80 </a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/旅行枕午睡枕头.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">旅行枕午睡枕头 ￥ 90</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/枕头记忆棉颈椎枕.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">/枕头记忆棉颈椎枕 ￥ 85</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            window.onload = function() {
+                var Lis = document
+                    .getElementById("ul_list")
+                    .getElementsByTagName("li");
+                for (i = 0; i < Lis.length; i++) {
+                    Lis[i].i = i;
+
+                    //设置鼠标移入时的样式。
+                    Lis[i].onmouseover = function() {
+                        this.className = "lihover";
+                    };
+                    //设置鼠标移开时的样式为空。
+                    Lis[i].onmouseout = function() {
+                        this.className = "";
+                    };
+                }
+            };
+        </script>
+        <script>
+            var slideShowContainer = document.getElementById("sidebar2");
+            var pic = document
+                .getElementById("picUl")
+                .getElementsByTagName("li");
+            var dot = document
+                .getElementById("dotUl")
+                .getElementsByTagName("li");
+            var title = document
+                .getElementById("titleDiv")
+                .getElementsByTagName("span");
+            var index = 0;
+            var timer = null;
+            /*定义图片切换函数*/
+            function changePic(curIndex) {
+                for (var i = 0; i < pic.length; ++i) {
+                    pic[i].style.display = "none";
+                    dot[i].className = "unselected";
+                    title[i].className = "hide";
+                }
+                pic[curIndex].style.display = "block";
+                dot[curIndex].className = "selected";
+                title[curIndex].className = "show";
+            }
+            /*index超出图片总量时归零*/
+            function autoPlay() {
+                if (+index >= pic.length) {
+                    index = 0;
+                }
+                changePic(index);
+                index++;
+            }
+            /*定义并调用自动播放函数*/
+            timer = setInterval(autoPlay, 1500);
+            /*鼠标划过整个容器时停止自动播放*/
+            slideShowContainer.onmouseover = function() {
+                clearInterval(timer);
+            };
+            /*鼠标离开整个容器时继续播放下一张*/
+            slideShowContainer.onmouseout = function() {
+                timer = setInterval(autoPlay, 1500);
+            };
+            /*遍历所有数字导航实现划过切换至对应的图片*/
+            for (var i = 0; i < dot.length; i++) {
+                dot[i].onmouseover = function() {
+                    clearInterval(timer);
+                    index = this.innerText - 1;
+                    changePic(index);
+                };
+            }
+        </script>
+        <script>
+            $(function() {
+                //获取点击事件的对象
+                $(".nav li").click(function() {
+                    //获取要显示或隐藏的对象
+                    var divShow = $(".footer3").children(".list1");
+                    //判断当前对象是否被选中，如果没选中的话进入if循环
+                    if (!$(this).hasClass("selected")) {
+                        //获取当前对象的索引
+                        var index = $(this).index();
+                        //当前对象添加选中样式并且其同胞移除选中样式；
+                        $(this)
+                            .addClass("selected")
+                            .siblings("li")
+                            .removeClass("selected");
+                        //索引对应的div块显示
+                        $(divShow[index]).show();
+                        //索引对应的div块的同胞隐藏
+                        $(divShow[index])
+                            .siblings(".list1")
+                            .hide();
+                    }
+                });
+            });
+        </script>
+        <script src="js/aside.js"></script>
+    </body>
+</html>

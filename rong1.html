@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link href="gouwu.css" rel="stylesheet" type="text/css" />
+        <title>小叮当电器</title>
+        <script src="js/jquery.js"></script>
+    </head>
+
+    <body>
+        <aside>
+            <ul>
+                <li>
+                    <a href="#"
+                        ><div class="sidebox" id="searchBox">
+                            <img src="image/aside_search.png" />
+                            <input
+                                type="text"
+                                class="input"
+                                label="请输入搜索内容"
+                                placeholder="请输入搜索内容"
+                            />
+                            <input type="submit" value="搜索" /></div
+                    ></a>
+                </li>
+                <li>
+                    <a href="javascript:goTop();"
+                        ><div class="sidebox" id="sideNormal">
+                            <img src="image/aside_top.png" />回到顶部
+                        </div></a
+                    >
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <div class="container">
+                <p>欢迎来到小叮当</p>
+            </div>
+        </header>
+        <nav>
+            <div id="menuBar" class="container">
+                <img src="image/logo.jpg" alt="商城" />
+                <ul>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="mao-3.html">服装</a></li>
+                    <li><a href="rong1.html">电器</a></li>
+                    <li><a href="rong2.html">家具</a></li>
+                    <li><a href="mao-4.html">手表</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img
+                                src="image/shoppingCart.jpg"
+                                width="20px"
+                            />购物车
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div id="container">
+                <div id="menu">
+                    <table
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                    >
+                        <tr class="a">
+                            <td class="one"><span>所有商品</span></td>
+                            <td class="two">
+                                <span><a href="#">首页</a></span>
+                            </td>
+                            <td class="three">
+                                <span
+                                    ><img
+                                        src="rongimg/shoppingCart.jpg"
+                                        width="20px"
+                                    /><a href="#"> 购物车</a></span
+                                >
+                            </td>
+                            <td class="four"><span>每日精选</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="mainContent">
+                    <div id="sidebar" class="caidan">
+                        <ul id="ul_list">
+                            <li>
+                                <a href="#">手机</a>
+                                <div class="list">
+                                    <a href="#">国内品牌</a>
+                                    <hr />
+                                    <span><a href="#">华为</a></span
+                                    ><span><a href="#">oppo</a></span
+                                    ><span><a href="#">vivo</a></span
+                                    ><span><a href="#">小米</a></span
+                                    ><span><a href="#">魅族</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">国外品牌</a>
+                                    <hr />
+                                    <span><a href="#">苹果</a></span
+                                    ><span><a href="#">诺基亚</a></span
+                                    ><span><a href="#">三星</a></span
+                                    ><span><a href="#">索尼</a></span
+                                    ><span><a href="#">摩托罗拉</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">游戏设备</a>
+                                <div class="list">
+                                    <a href="#">电脑硬件</a>
+                                    <hr />
+                                    <span><a href="#">CPU</a></span
+                                    ><span><a href="#">显示器</a></span
+                                    ><span><a href="#">显卡</a></span
+                                    ><span><a href="#">主板</a></span
+                                    ><span><a href="#">硬盘</a></span
+                                    ><span><a href="#">机箱</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">游戏外设</a>
+                                    <hr />
+                                    <span><a href="#">鼠标</a></span
+                                    ><span><a href="#">键盘</a></span
+                                    ><span><a href="#">游戏耳机</a></span
+                                    ><span><a href="#">手柄</a></span
+                                    ><span><a href="#">VR眼睛</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">电脑主机</a>
+                                <div class="list">
+                                    <a href="#">笔记本</a>
+                                    <hr />
+                                    <span><a href="#">CPU</a></span
+                                    ><span><a href="#">联想</a></span
+                                    ><span><a href="#">戴尔</a></span
+                                    ><span><a href="#">惠普</a></span
+                                    ><span><a href="#">神舟</a></span
+                                    ><span><a href="#">外星人</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">平板电脑</a>
+                                    <hr />
+                                    <span><a href="#">ipad</a></span
+                                    ><span><a href="#">华为平板电脑</a></span
+                                    ><span><a href="#">小米平板电脑</a></span
+                                    ><span><a href="#">三星平板电脑</a></span
+                                    ><span><a href="#">华硕</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">相机摄影</a>
+                                <div class="list">
+                                    <a href="#">单反</a>
+                                    <hr />
+                                    <span><a href="#">CPU</a></span
+                                    ><span><a href="#">尼康</a></span
+                                    ><span><a href="#">佳能</a></span
+                                    ><span><a href="#">索尼</a></span
+                                    ><span><a href="#">富士</a></span
+                                    ><span><a href="#">宾得</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">其他设备</a>
+                                    <hr />
+                                    <span><a href="#">镜头</a></span
+                                    ><span><a href="#">拍立得</a></span
+                                    ><span><a href="#">摄影机</a></span
+                                    ><span><a href="#">相机脚架</a></span
+                                    ><span><a href="#">相机清洗</a></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">生活厨电</a>
+                                <div class="list">
+                                    <a href="#">生活电器</a>
+                                    <hr />
+                                    <span><a href="#">风扇</a></span
+                                    ><span><a href="#">空气净化器</a></span
+                                    ><span><a href="#">扫地机器人</a></span
+                                    ><span><a href="#">吸尘器</a></span
+                                    ><span><a href="#">取暖器</a></span
+                                    ><span><a href="#">抽湿加湿器</a></span
+                                    ><br /><br /><br />
+                                    <hr />
+
+                                    <a href="#">厨房电器</a>
+                                    <hr />
+                                    <span><a href="#">电饭煲</a></span
+                                    ><span><a href="#">烤箱</a></span
+                                    ><span><a href="#">电磁炉</a></span
+                                    ><span><a href="#">电水壶</a></span
+                                    ><span><a href="#">咖啡机</a></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sidebar2">
+                        <ul id="picUl">
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/155494994582511791.jpg"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/O1CN01IYxqCw1MvfP78IWz8_!!2586051497.png"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/O1CN012SSDuj1PMo8qdyX0r_!!1114511827.jpg_430x430q90.jpg"
+                                        alt=""
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/pic_5tu_big_201709191119589180.jpg"
+                                        alt=""
+                                /></a>
+                            </li>
+                        </ul>
+                        <ul id="dotUl">
+                            <li class="selected">1</li>
+                            <li class="unselected">2</li>
+                            <li class="unselected">3</li>
+                            <li class="unselected">4</li>
+                        </ul>
+                        <div id="titleDiv">
+                            <span class="show"><a href="#">1</a></span>
+                            <span class="hide"><a href="#">2</a></span>
+                            <span class="hide"><a href="#">3</a></span>
+                            <span class="hide"><a href="#">4</a></span>
+                        </div>
+                    </div>
+                    <div id="content">
+                        <img
+                            src="rongimg/TB1m20nMXXXXXa7aXXXXXXXXXXX-570-400.jpg"
+                        />
+                    </div>
+                </div>
+                <div id="footer">
+                    <hr
+                        style="border:1 dashed #987cb9"
+                        width="80%"
+                        color="#987cb9"
+                        size="1"
+                    />
+                    <a>区域零售</a>
+                    <hr
+                        style="border:1 dashed #987cb9"
+                        width="80%"
+                        color="#987cb9"
+                        size="1"
+                    />
+                </div>
+                <div id="footer2">
+                    <ul class="nav">
+                        <li class="selected">上海</li>
+                        <li>深圳</li>
+                        <li>杭州</li>
+                        <li>南京</li>
+                        <li>大连</li>
+                        <li>哈尔滨</li>
+                        <li>成都</li>
+                        <li>重庆</li>
+                    </ul>
+                </div>
+                <div class="footer3">
+                    <div class="list1 ">
+                        <img src="rongimg/上海.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/深圳.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/杭州.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/南京.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/大连.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/哈尔滨.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/成都.jpg" />
+                    </div>
+                    <div class="list1">
+                        <img src="rongimg/重庆.jpg" />
+                    </div>
+                </div>
+                <div class="footer4">
+                    <ul>
+                        <li><a>1F 手机</a></li>
+                    </ul>
+                </div>
+                <div class="footer5">
+                    <table height="500" width="1024">
+                        <tr>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/TB1kpmUSVXXXXaIXpXXXXXXXXXX-223-377.png"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/OPPO R11s Plus.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">OPPO R11s Plus</a
+                                ><a href="#"> ￥ 1500</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/OPPO R11手机正品r11.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">OPPO R11手机正品r11 ￥ 1050</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/OPPO A1手机全面屏OPPOA79.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >OPPO A1 手机全面屏OPPOA79 ￥ 1000</a
+                                >
+                            </td>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/TB1gY91SVXXXXbgXXXXXXXXXXXX-223-341.png"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/Nokia诺基亚 X71.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">Nokia/诺基亚 X71 ￥ 980 </a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/OPPO A83手机全面屏.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">OPPO A83手机全面屏 ￥ 790</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/O1CN01Epipph2BXQqgjc2HY_!!353828348.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >/联想 Z5S后置三摄指纹解锁水滴屏 ￥ 858</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer4">
+                    <ul>
+                        <li><a>2F 游戏设备</a></li>
+                    </ul>
+                </div>
+                <div class="footer5">
+                    <table height="500" width="1024">
+                        <tr>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/游戏设备.jpg"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/devil beauty红色字母logo鼠标垫.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#">devil beauty红色字母logo鼠标垫</a
+                                ><a href="#"> ￥ 599</a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/FUXK主机定制 泰坦陨落 Z270I.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >FUXK主机定制 泰坦陨落 Z270I ￥ 28888</a
+                                >
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/50寸单机版立式广告机安卓广告机网络广告机电脑一体机.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >50寸单机版立式广告机安卓广告机网络广告机电脑一体机
+                                    ￥ 3000</a
+                                >
+                            </td>
+                            <td rowspan="2" width="204.8" height="500">
+                                <img
+                                    src="rongimg/精选好店.jpg"
+                                    width="204.8"
+                                    height="500"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/苹果风一体机电脑 四核i3i5i7.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >苹果风一体机电脑 四核i3i5i7 ￥ 1600
+                                </a>
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/65寸纯平面电容触摸一体机电脑触控查询机触摸广告机.png"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >65寸纯平面电容触摸一体机电脑触控查询机触摸广告机
+                                    ￥ 2200</a
+                                >
+                            </td>
+                            <td width="204.8" height="250">
+                                <a href="#"
+                                    ><img
+                                        src="rongimg/原装瑞士赛钛客RAT9无线双眼激光游戏鼠标.jpg"
+                                        width="204.8"
+                                        height="200"/></a
+                                ><a href="#"
+                                    >原装瑞士赛钛客RAT9无线双眼激光游戏鼠标 ￥
+                                    1008</a
+                                >
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            window.onload = function() {
+                var Lis = document
+                    .getElementById("ul_list")
+                    .getElementsByTagName("li");
+                for (i = 0; i < Lis.length; i++) {
+                    Lis[i].i = i;
+
+                    //设置鼠标移入时的样式。
+                    Lis[i].onmouseover = function() {
+                        this.className = "lihover";
+                    };
+                    //设置鼠标移开时的样式为空。
+                    Lis[i].onmouseout = function() {
+                        this.className = "";
+                    };
+                }
+            };
+        </script>
+        <script>
+            var slideShowContainer = document.getElementById("sidebar2");
+            var pic = document
+                .getElementById("picUl")
+                .getElementsByTagName("li");
+            var dot = document
+                .getElementById("dotUl")
+                .getElementsByTagName("li");
+            var title = document
+                .getElementById("titleDiv")
+                .getElementsByTagName("span");
+            var index = 0;
+            var timer = null;
+            /*定义图片切换函数*/
+            function changePic(curIndex) {
+                for (var i = 0; i < pic.length; ++i) {
+                    pic[i].style.display = "none";
+                    dot[i].className = "unselected";
+                    title[i].className = "hide";
+                }
+                pic[curIndex].style.display = "block";
+                dot[curIndex].className = "selected";
+                title[curIndex].className = "show";
+            }
+            /*index超出图片总量时归零*/
+            function autoPlay() {
+                if (+index >= pic.length) {
+                    index = 0;
+                }
+                changePic(index);
+                index++;
+            }
+            /*定义并调用自动播放函数*/
+            timer = setInterval(autoPlay, 1500);
+            /*鼠标划过整个容器时停止自动播放*/
+            slideShowContainer.onmouseover = function() {
+                clearInterval(timer);
+            };
+            /*鼠标离开整个容器时继续播放下一张*/
+            slideShowContainer.onmouseout = function() {
+                timer = setInterval(autoPlay, 1500);
+            };
+            /*遍历所有数字导航实现划过切换至对应的图片*/
+            for (var i = 0; i < dot.length; i++) {
+                dot[i].onmouseover = function() {
+                    clearInterval(timer);
+                    index = this.innerText - 1;
+                    changePic(index);
+                };
+            }
+        </script>
+        <script>
+            $(function() {
+                //获取点击事件的对象
+                $(".nav li").click(function() {
+                    //获取要显示或隐藏的对象
+                    var divShow = $(".footer3").children(".list1");
+                    //判断当前对象是否被选中，如果没选中的话进入if循环
+                    if (!$(this).hasClass("selected")) {
+                        //获取当前对象的索引
+                        var index = $(this).index();
+                        //当前对象添加选中样式并且其同胞移除选中样式；
+                        $(this)
+                            .addClass("selected")
+                            .siblings("li")
+                            .removeClass("selected");
+                        //索引对应的div块显示
+                        $(divShow[index]).show();
+                        //索引对应的div块的同胞隐藏
+                        $(divShow[index])
+                            .siblings(".list1")
+                            .hide();
+                    }
+                });
+            });
+        </script>
+        <script src="js/aside.js"></script>
+    </body>
+</html>
