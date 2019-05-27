@@ -1,0 +1,52 @@
+#goodsNews{
+	height: 110px;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.scrollText {
+	width: 1024px;
+	height: 100px;
+	text-align: center;
+	min-height: 25px;
+	line-height: 25px;
+	border: #ccc 1px solid;
+	float: left;
+	overflow: hidden;
+}
+
+.scrollText li {
+	height: 25px;
+	padding-left: 10px;
+}
+
+.scrollText li a{
+	text-decoration: none;
+}
+
+#goodsNews .up {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	background: #f90;
+}
+
+#goodsNews .down {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	background: #960;
+}
+
+#goodsNews .up:hover{
+	box-shadow: 0px 0px 10px #ff0000;
+}
+
+#goodsNews .down:hover{
+	box-shadow: 0px 0px 10px #ff0000;
+}
