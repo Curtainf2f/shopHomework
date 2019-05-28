@@ -111,12 +111,17 @@ nav {
 }
 .typeShow .typeShowTitle {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     border: 1px solid #ffffff;
     padding: 5px 5px 5px 5px;
 }
-.typeShow .typeShowTitle div {
+.typeShow .typeShowTitle div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.typeShow .typeShowTitle div div{
     margin-right: 10px;
     width: 10px;
     height: 30px;
