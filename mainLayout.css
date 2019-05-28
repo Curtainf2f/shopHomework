@@ -10,6 +10,14 @@ li {
 body{
 	min-width: 1024px;
 }
+#headd{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#headd a{
+	text-decoration: none;
+}
 .container{
 	width: 1024px;
 }
