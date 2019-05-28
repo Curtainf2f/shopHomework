@@ -1,0 +1,686 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>newweb</title>
+	<style>
+		* { margin: 0px; padding: 0px; }
+		ul { list-style: none; }
+		li{
+			list-style: none;
+		}
+		h1{background-color: antiquewhite}
+		body{ background-color:white;
+			min-width: 1024px;
+		}
+		section{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{width: 1024px;}
+		header{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 30px;
+			background-color: #806bb6;
+		}
+		header p{
+			color: #ffffff;
+		}
+		nav{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+			border: 1px solid #F5F5F5;
+			background-color: #F5F5F5;
+		}
+		#menuBar{
+			display: flex;
+			height: 100%;
+			justify-content: space-between;
+			align-items: center;
+		}
+		#menuBar img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+		#menuBar ul li {
+			border-radius: 10px;
+			transition: background-color 0.2s linear;
+			display: inline-block;
+			width: 120px;
+			text-align: center;
+			font-size: 22px;
+		}
+		#menuBar ul li:hover{
+			transition: background-color 0.3s ease;
+			background-color: #87CEEB;
+		}
+		#menuBar ul li a{
+			text-decoration: none;
+			color: black;
+			display: block;
+			line-height: 50px;
+		}
+		aside{
+			position: fixed;
+			width: 54px;
+			right: 0px;
+			top: 60%;
+			z-index: 100;
+		}
+		aside .sidebox{
+    		display: flex;
+    		justify-content: flex-start;
+    		align-items: center;
+    		white-space: nowrap;
+		}
+		aside input:first-of-type{
+    		height: 38px;
+    		width: 420px;
+    		border: 1px solid #CCCCCC;
+			font-size: 18px;
+		}
+		aside input:last-of-type{
+    		height: 40px;
+    		width: 55px;
+    		background-color: #e9967a;
+			border: 1px solid #CCCCCC;
+			color: #FFFFFF;
+			font-size: 18px;
+		}
+		aside input:last-of-type:hover{
+    		background-color: #ffa500;
+		}
+		aside ul li img {
+    		float: left;
+		}
+		aside ul li{
+    		width: 54px;
+    		height: 54px;
+    		float: left;
+    		position: relative;
+    		border-bottom: 1px solid #444;
+		}
+		aside ul li .sidebox {
+    		position: absolute;
+    		width: 54px;
+    		height: 54px;
+    		top: 0;
+    		right: 0;
+    		transition: all 0.3s;
+    		background: #000;
+    		opacity: 0.8;
+    		filter: Alpha(opacity=80);
+    		color: #fff;
+    		font: 14px/54px "微软雅黑";
+    		overflow: hidden;
+		}
+		#information{
+			width: 574px;
+			height: auto;
+			background-color:#FFFFFF;
+			float: left;
+		}
+		.jm{
+			background-color: #ACACAC
+		}
+		.ysp{
+			margin-left: 10px;
+		}
+		.ys{
+			margin-top: 10px;
+			display: flex;
+			justify-content: flex-start;
+		}
+		.ys li{
+			margin-left: 10px;
+			width: 45px;
+			height: 45px;
+		}
+		.chima{
+			width:110px;
+			height:40px;
+			background-image:url("guiimg/尺码1.jpg");
+			background-position:right;
+			background-repeat:no-repeat;
+			margin-left:10px;
+			margin-top:10px;
+		}
+		.box{
+				text-align: center;
+				margin-top: 10px;
+				list-style: none;
+				display: flex;
+				justify-content: flex-start;
+			}
+		.box button{
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.box input{
+				width: 40px;
+				text-align: center;
+			}
+		#money{
+				border: none;
+				text-align: left;
+				margin-left: 2px;
+			}
+		.box li{
+				display: block;
+				float: left;
+			}
+		.buy{
+			margin-left:30px;
+			margin-top:25px;
+		}
+		.buy a{
+			display:block;
+			width:200px;
+			height:50px;
+			color:#000;
+			border:1px solid #ccc;
+			float:left;
+			font-size:16px;
+			font-weight:bold;
+			font-family:Microsoft YaHei,arial;
+			margin-left:10px;
+			background-color:#fff;
+			text-align:center;
+			line-height:50px;
+		}
+		.fuwu{
+			width:500px;
+			height:35px;
+			margin-left:10px;
+			background-image:url("guiimg/服务1.jpg");
+			background-position:right;
+			background-repeat:no-repeat;
+			margin-top:50px;
+		}
+		#picture{
+			width: 450px;
+			height: 450px;
+			float: left;
+			overflow: hidden; 
+			position: relative;
+		}
+		#picture img{
+			width: 450px;
+			height: 450px;
+			transition: all 0.7s;
+		}
+		#picture img:hover{ transform: scale(1.1);}
+		#fangkuai{
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			position: absolute;
+			bottom: 13px;
+			left: 208px;
+		}
+		.selected{
+    		width: 12px;
+   		 	height: 12px;
+   	 		background-color: #FFFFFF;
+    		color: transparent;
+    		margin-left: 9px;
+		}
+		.unselected{
+    		width: 12px;
+    		height: 12px;
+    		background-color: #0069AD;
+    		color: transparent;
+    		margin-left: 9px;
+		}
+		#footer{
+			width: 1024px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: white;
+			position:relative;
+			float: left;
+		}
+		.classify{
+			width:198px;
+			height:1510px;
+		}
+		.classify .shopim {
+			width:198px;
+			height:210px;
+			border:1px solid #ccc;
+		}
+		.classify .shopim .name{
+			height:55px;width:198px;
+			background:rgba(232,232,232,0.5);
+			color:#000;
+			font-size:14px;
+			font-weight:bold;
+			line-height:55px;
+			text-align:center;
+		}
+		.classify .shopim .name img{
+			margin-left:0;
+			margin-bottom:-8px;
+		}
+		.classify .shopim .sc{
+			float:left;
+			width:67px;
+			height:20px;
+			border:1px solid #CCC;
+			margin-left:20px;
+			margin-top:10px;
+			text-align:center;
+			line-height:20px;
+	
+		}
+		.search{
+	 		background:url("guiimg/search_bg.jpg") no-repeat;
+			margin:15px 15px;
+	 		display:inline;
+		}
+		.search .left{
+			width:92px;
+			height:22px;
+			line-height:31px; 
+			background:url("guiimg/图标4.jpg") no-repeat;
+			border:none; 
+			float:left; 
+
+		}
+		.search .right{ 
+			width:68px; height:22px; 
+			float:left; 
+			background:url("guiimg/图标5.jpg") no-repeat;
+			border:none;
+		}
+		.classify .shopfl{
+			width:198px;
+			height:400px;
+			border:1px solid #ccc;
+			margin-top:30px;
+		}
+		.classify .shopfl ul li{
+			width:198px;
+			height:40px;
+		}
+		.classify .shopfl ul{
+			margin-top:15px;
+		}
+		.classify .shopfl ul li a{
+			width:150px;
+			height:40px;
+			font-size:12px;
+			font-family:"黑体";
+			margin-left:20px;
+			color:#666;
+			line-height:40px;
+		}
+		.classify .shopfl ul li a:hover{
+			color:pink;
+			font-size:16px;
+		}
+		.classify .shopfl .name{
+			height:40px;
+			width:198px;
+			background:rgba(232,232,232,0.5);
+			color:#000;
+			font-size:16px;
+			font-weight:bold;
+			line-height:40px;
+			text-align:center;
+	
+		}
+		.classify .shopsee{
+			width:198px;
+			height:840px;
+			border:1px solid #ccc;
+			margin-top:20px;
+	}
+		.classify .shopsee .name{
+			height:40px;
+			width:198px;
+			background:rgba(232,232,232,0.5);
+			color:#000;
+			font-size:16px;
+			font-weight:bold;
+			line-height:40px;
+			text-align:center;
+	
+		}
+		.classify .shopsee a{
+			width:170px;margin:0;
+			margin-top:10px;
+			margin-left:20px;
+			border:0;
+		}
+		.classify .shopsee img{
+			margin-top:0px;
+		}
+		.tabbedPanels {
+			position:absolute;
+			top:0;
+			right:0;
+			width: 826px;
+			margin:10px auto;
+			border:1px soild #000;
+		}
+		.tabbedPanels .tabs{
+			width:800px;
+			height:50px;
+			border-bottom:2px solid #000;
+			margin-bottom:20px;
+		}
+		.tabbedPanels .tabs li{
+			float:left;
+		}
+		.tabbedPanels .tabs li a{
+			width:100px;
+			height:40px;
+			margin-bottom:10px;
+			font-size:16px;
+			font-weight:bold;
+			margin-left:50px;
+			text-decoration:none;
+			color:#000;
+			line-height:40px;
+			text-align:center;
+		}
+		.tabs li a.active{
+			border-bottom:3px solid #F30;
+		
+		}
+		.panelContainer{
+			width:826px;
+			margin:0 auto;
+			margin-top:10px;
+		}
+		.panel img{
+			margin-left:10px;
+		}
+	</style>
+</head>
+
+<body>
+	    <aside>
+            <ul>
+                <li>
+                    <a href="#"
+                        ><div class="sidebox" id="searchBox">
+                            <img src="image/aside_search.png" />
+                            <input type="text" class="input" label="请输入搜索内容" placeholder="请输入搜索内容">
+                            <input type="submit" value="搜索">
+                        </div></a
+                    >
+                </li>
+                <li>
+                    <a href="javascript:goTop();"
+                        ><div class="sidebox" id="sideNormal">
+                            <img src="image/aside_top.png" />回到顶部
+                        </div></a
+                    >
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <div class="container">
+                <p>欢迎来到小叮当</p>
+            </div>
+        </header>
+        <nav>
+            <div id="menuBar" class="container">
+                <img src="image/logo.jpg" alt="商城" />
+                <ul>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="mao-3.html">服装</a></li>
+                    <li><a href="rong1.html">电器</a></li>
+                    <li><a href="rong2.html">家具</a></li>
+                    <li><a href="mao-4.html">手表</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img
+                                src="image/shoppingCart.jpg"
+                                width="20px" alt=""
+                            />购物车
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<section>
+	<div class="container">
+			<img src="guiimg/女装品牌.jpg" width="1024" height="100px" alt="品牌" />
+		<div id="information">
+			<font color="#000000" size="+2">威娅纪棉麻连衣裙2019新款女夏装无袖中长款清新条纹亚麻衬衫裙</font>
+			<hr>
+			<ul class="jm">
+				<li><a>价格:</a><a>&nbsp;&nbsp;&nbsp;</a><font color="#E91420" size="+2">￥405.00</font></li>
+				<li><a>店铺介绍:</a><a>&nbsp;&nbsp;&nbsp;</a><a>海量新品 潮流穿搭 玩趣互动</a></li>
+			</ul>
+			<hr>
+			<p class="ysp">颜色：</p>
+			<ul class="ys">
+				<li id="li1" onmouseover="overLi('li1')" onmouseout="outLi('li1')">
+					<a href="#" title="浅绿色" ><img src="guiimg/ys3.jpg" alt=""/></a></li>
+				<li id="li2" onmouseover="overLi('li2')" onmouseout="outLi('li2')">
+					<a href="#" title="浅驼色" ><img src="guiimg/ys4.jpg" alt=""/></a></li>
+			</ul>
+			<p class="chima">尺码：</p>
+			<ul class="box">
+				<td>&nbsp;&nbsp;数量&nbsp;&nbsp;&nbsp;</td>
+				<li><button id="subtract">-</button></li>
+				<li><input type="text" id="text" value="1"/></li>
+				<li><button id="plus">+</button></li>
+				<li>&nbsp;&nbsp;&nbsp;¥<input type="text" id="money" value="405.00"/></li>
+		</ul>
+			<p class="buy"><a href="#" id="firstbuy">立即购买</a><a href="#">加入购物车</a></p>
+			<br>
+			<p class="fuwu">服务承诺：</p>
+		</div>
+		<div id="picture">
+			<ul id="tupian">
+           		<li><a href="#"><img src="guiimg/女装1.jpg" alt=""/></a></li>
+           		<li><a href="#"><img src="guiimg/女装2.jpg" alt=""/></a></li>
+           		<li><a href="#"><img src="guiimg/女装3.jpg" alt=""/></a></li>
+           		<li><a href="#"><img src="guiimg/女装4.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="guiimg/女装5.jpg" alt=""/></a></li>
+       		</ul>
+			<ul id="fangkuai">
+           		<li class="selected">1</li>
+           		<li class="unselected">2</li>
+           		<li class="unselected">3</li>
+           		<li class="unselected">4</li>
+				<li class="unselected">5</li>
+      	 	</ul>
+		</div>
+		<marquee style="width: 1024px; height: 30px" scrollamount="10" direction="right" behavior="alternate" bgcolor="##FFFFFF">
+			<p><font color="#ff6600" size="4" >！！！ 欢迎光临 VERRAGEE威娅纪  一件长裙可以改变一个女孩的命运 ！！！</font ></p>
+		</marquee>
+		<div id="footer">
+			<div class="classify">
+    			<div class="shopim">
+        			<p class="name">VERRAGEE<img src="guiimg/图标2.jpg" width="22" height="22" alt="" /></p>
+       		 		<img src="guiimg/图标3.jpg" alt="" />
+       		 		<p class="sc"><a href="#">收藏店铺</a></p>
+             		<p class="sc"><a href="#">进入店铺</a></p>
+	  				<div class="search">
+						<input class="left" type="text" />
+						<input class="right" type="button" style=" cursor:pointer;" value=""/>
+   		    		</div>
+				</div>
+				<div class="shopfl">
+        			<p class="name">本店分类</p>
+        				<ul>
+            				<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />全部宝贝</a></li>
+            				<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />派对酒会</a></li>
+							<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />街头日常</a></li>
+							<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />旅行假期</a></li>
+							<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />裙装Dresses</a></li>
+							<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />新品抢鲜</a></li>
+							<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />外套Coat</a></li>
+							<li><a href="#"><img src="guiimg/图标6.gif" width="10" height="10" alt="" />上装Blouses</a></li>
+            			</ul>
+        		</div>
+				<div class="shopsee">
+        			<p class="name">风格系列分类</p>
+					<a href="#" class="fg">
+						<img src="guiimg/fg8.jpg" width="170">
+					</a>
+					<a href="#" class="fg">
+						<img src="guiimg/fg9.jpg" width="170">
+					</a>
+					<a href="#" class="fg">
+						<img src="guiimg/fg10.jpg" width="170">
+					</a>
+				</div>
+			</div>
+			<div class="tabbedPanels">
+    			<ul class="tabs">
+        			<li><a href="#panel01" class="active">宝贝详情</a></li>
+            		<li><a href="#panel02">累计评价 0</a></li>
+        			<li><a href="#panel03">专享服务</a></li>
+        		</ul>
+				<div class="panelContainer">
+					<div class="panel" id="panel01">
+						<img src="guiimg/xq4.jpg">
+						<img src="guiimg/xq5.jpg">
+						<img src="guiimg/xq6.jpg">
+					</div>
+					<div class="panel" id="panel02">
+						
+					</div>
+					<div class="panel" id="panel03">
+						
+					</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<script src="js/jquery.js"></script>
+	<script>
+		var picture = document.getElementById("picture");
+		var tupian = document.getElementById("tupian").getElementsByTagName("li");
+		var fangkuai = document.getElementById("fangkuai").getElementsByTagName("li");
+		var index = 0;
+		var timer = null;
+		function changePic (curIndex) {
+    		for(var i = 0;i < tupian.length;++i){
+        		tupian[i].style.display = "none";
+        		fangkuai[i].className = "unselected";
+    		}
+    	tupian[curIndex].style.display = "block";
+    	fangkuai[curIndex].className = "selected";
+		}
+		function autoPlay(){
+    	if(+index >= tupian.length){
+        	index = 0;
+    	}
+    	changePic(index);
+    	index++;
+		}
+		timer = setInterval(autoPlay,1500);
+		picture.onmouseover = function(){
+    		clearInterval(timer);
+		}
+		picture.onmouseout = function(){
+    		timer = setInterval(autoPlay,1500);
+		}
+		for(var i = 0;i < fangkuai.length;i++){
+    		fangkuai[i].onmouseover = function(){
+        		clearInterval(timer);
+        		index = this.innerText-1;
+        		changePic(index)
+    		}
+		}
+</script>
+	<script>
+		function overLi(id){
+    		var l = document.getElementById(id);
+    		l.style.border = "1px solid red";
+		}
+		function outLi(id){
+    		var l = document.getElementById(id);
+    		l.style.border = "0px solid red";
+		}
+	</script>
+	<script>
+			window.onload = function(){
+				var plus = document.getElementById("plus");
+				var i = document.getElementById("text").value;
+				var subtract = document.getElementById("subtract");
+				var money = document.getElementById("money").value;
+				subtract.onclick = function(){
+					if (i>0) {
+						i--;
+						document.getElementById("text").value = i;
+						document.getElementById("money").value = i*money;
+					} else{
+						i=0;
+						document.getElementById("text").value = i;
+						document.getElementById("money").value = i*money;
+					}
+				}	
+				plus.onclick = function(){
+					i++;
+					document.getElementById("text").value = i;
+					document.getElementById("money").value = i*money;
+				}		
+			}		
+	</script>
+	<script>
+	$(document).ready(function() {
+    $("aside ul li #searchBox").hover(
+        function() {
+            $(this)
+                .animate({ width: "555px" }, 100)
+                .css({
+                    opacity: "1",
+                    filter: "Alpha(opacity=100)",
+                    background: "#ae1c1c"
+                });
+        },
+        function() {
+            $(this)
+                .animate({ width: "54px" }, 100)
+                .css({
+                    opacity: "0.8",
+                    filter: "Alpha(opacity=80)",
+                    background: "#000"
+                });
+        }
+    );
+    $("aside ul li #sideNormal").hover(
+        function() {
+            $(this)
+                .animate({ width: "124px" }, 200)
+                .css({
+                    opacity: "1",
+                    filter: "Alpha(opacity=100)",
+                    background: "#ae1c1c"
+                });
+        },
+        function() {
+            $(this)
+                .animate({ width: "54px" }, 200)
+                .css({
+                    opacity: "0.8",
+                    filter: "Alpha(opacity=80)",
+                    background: "#000"
+                });
+        }
+    );
+});
+
+function goTop() {
+    $("html,body").animate({ scrollTop: 0 }, 600);
+}
+	</script>
+</body>
+</html>

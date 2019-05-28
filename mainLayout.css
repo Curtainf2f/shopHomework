@@ -1,105 +1,138 @@
 /* #dd528a */
 * {
-	margin: 0px;
-	padding: 0px;
-	outline: 0px;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
 }
 li {
-	list-style: none;
+    list-style: none;
 }
-body{
-	min-width: 1024px;
+body {
+    min-width: 1024px;
 }
-#headd{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+#headd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#headd a{
-	text-decoration: none;
+#headd a {
+    text-decoration: none;
 }
-.container{
-	width: 1024px;
+.container {
+    width: 1024px;
 }
-section{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 20px;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
-.haveColor{
-	background-color: rgba(128, 107, 182, 0.4);
+.haveColor {
+    background-color: rgba(128, 107, 182, 0.4);
 }
-header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 30px;
-	background-color: #806bb6;
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #806bb6;
 }
-header p{
-	color: #ffffff;
+header p {
+    color: #ffffff;
 }
-nav{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 50px;
-	border: 1px solid #F5F5F5;
-	background-color: #F5F5F5;
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
 }
-#menuBar{
-	display: flex;
-	height: 100%;
-	justify-content: space-between;
-	align-items: center;
+#menuBar {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
-#menuBar img{
-	max-width: 100%;
-	max-height: 100%;
+#menuBar img {
+    max-width: 100%;
+    max-height: 100%;
 }
 #menuBar ul li {
-	border-radius: 10px;
-	transition: background-color 0.2s linear;
-	display: inline-block;
-	width: 120px;
-	text-align: center;
-	font-size: 22px;
+    border-radius: 10px;
+    transition: background-color 0.2s linear;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    font-size: 22px;
 }
-#menuBar ul li:hover{
-	transition: background-color 0.3s ease;
-	background-color: #87CEEB;
+#menuBar ul li:hover {
+    transition: background-color 0.3s ease;
+    background-color: #87ceeb;
 }
-#menuBar ul li a{
-	text-decoration: none;
-	color: black;
-	display: block;
-	line-height: 50px;
+#menuBar ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    line-height: 50px;
 }
-.showGoods{
-	margin-top: 10px;
-	width: 800px;
-	height: 440px;
-	float: left;
+.showGoods {
+    margin-top: 10px;
+    width: 800px;
+    height: 440px;
+    float: left;
 }
-.showSmallGoods{
-	margin-bottom: 10px;
-	width: 190px;
-	height: 140px;
-	background-color: #00ffff;
+.showSmallGoods {
+    margin-bottom: 10px;
+    width: 190px;
+    height: 140px;
+    background-color: #00ffff;
 }
-.showSmallGoods:hover{
-	box-shadow: 0px 0px 10px #87ceeb;
+.showSmallGoods:hover {
+    box-shadow: 0px 0px 10px #87ceeb;
 }
-.typeShowBox{
-	width: 1024px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.typeShowBox {
+    width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.typeShow{
-	border: 1px solid red;
-	background-color: darkblue;
-	width: 500px;
-	height: 400px;
+.typeShow {
+    background-color: rgba(128, 128, 128, 0.1);
+    box-shadow: 0px 0px 10px #ffc0cb;
+    width: 502px;
+    height: 400px;
+}
+.typeShow .typeShowTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #ffffff;
+    padding: 5px 5px 5px 5px;
+}
+.typeShow .typeShowTitle div {
+    margin-right: 10px;
+    width: 10px;
+    height: 30px;
+}
+.typeShowGoods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.typeShowGoods a {
+    text-decoration: none;
+}
+.typeShowGoods img {
+    width: 249px;
+    height: 300px;
+}
+.typeShowGoods div {
+    width: 249px;
+    text-align: center;
+    border: 1px solid #ffffff;
+}
+.typeShowGoods div:hover {
+    border: 1px solid #ff0000;
 }
