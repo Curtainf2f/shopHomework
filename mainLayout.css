@@ -10,6 +10,12 @@ li {
 body {
     min-width: 1024px;
 }
+a{
+	color: #000000;
+}
+a:hover{
+	color: #FF5000;
+}
 #headd {
     display: flex;
     justify-content: space-between;
